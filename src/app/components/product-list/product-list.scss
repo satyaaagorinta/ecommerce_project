@@ -1,0 +1,125 @@
+
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  // .searchbar-container-bg {
+  //   background-color: #f3f3f3; // Or your magenta shade if preferred
+  //   padding: 1rem;
+  //   display: flex;
+  //   justify-content: center;
+  //   margin-top: 1rem;
+  // }
+  
+  // .searchbar-container {
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 10px;
+  //   max-width: 500px;
+  //   width: 100%;
+  
+  //   input[type="text"] {
+  //     flex: 1;
+  //     padding: 10px 12px;
+  //     border: 1px solid #ccc;
+  //     border-radius: 8px;
+  //     font-size: 14px;
+  //     outline: none;
+  
+  //     &:focus {
+  //       border-color: #c2185b; // Magenta or theme color
+  //     }
+  //   }
+  
+  //   button.primary {
+  //     background-color: #c2185b; // Magenta theme
+  //     border: none;
+  //     color: white;
+  //     padding: 8px 12px;
+  //     border-radius: 8px;
+  //     cursor: pointer;
+  //     display: flex;
+  //     align-items: center;
+  
+  //     i.material-icons {
+  //       font-size: 20px;
+  //     }
+  
+  //     &:hover {
+  //       background-color: #ad1457; // Slightly darker magenta
+  //     }
+  //   }
+  // }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 24px;
+    justify-content: center;
+  }
+  
+
+
+  .searchbar-container-bg {
+  //  background: #fdfcfc; 
+   padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+   margin-top: 1rem;
+  // margin-left: 3rem;
+  //  margin-right: 3rem ;
+
+
+
+
+}
+
+.searchbar-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  //  border: 1px solid rgb(251, 157, 157);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 50%;
+  // width: 100%;
+  margin-left: 14rem ;
+  margin-right: 9rem ;
+  margin-top: 1rem;
+}
+
+.searchbar-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.35rem 1rem;
+  background: transparent;
+  
+  font-family: poppins;
+  font-size: 0.7rem;
+}
+
+.searchbar-container button {
+  background: none;
+  border: none;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  // color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar-container button:hover {
+  color:rgb(63, 63, 63);
+}
+
+
+.searchbar-container i {
+  font-size: 15px; /* smaller than default 24px */
+  font-weight: 300; /* lighter appearance */
+ 
+}

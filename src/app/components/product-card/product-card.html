@@ -1,0 +1,103 @@
+<!-- 
+
+<div class="product-card">
+  <div class="product-tumb">
+    <img
+      [src]="product.image"
+      alt="{{ product.title }}"
+    />
+  </div>
+  <div class="product-details">
+    <div class="title">
+      <h4>{{ product.title }}</h4>
+    </div>
+    <div class="product-bottom-details">
+      <div class="product-price">{{ product.price | currency:'INR' }}</div>
+      <div class="wishlist">
+        <span
+          class="material-icons not-selected"
+          (click)="toggleWishlist(product)"
+          [ngStyle]="{ color: isInWishlist() ? 'red' : 'black' }"
+        >
+          {{ isInWishlist() ? "favorite" : "favorite_border" }}
+        </span>
+      </div>
+    </div>
+    <div class="actions-row">
+      <div class="cart-actions">
+        <button class="remove-cart-btn" (click)="removeFromCart()">-</button>
+        <input type="text" [(ngModel)]="cartCount" />
+        <button class="add-cart-btn" (click)="addToCart()">+</button>
+      </div>
+      <div class="view-details">
+        <span
+          class="material-icons open-in-new"
+          [routerLink]="['/products', product.id]"
+        >
+          open_in_new
+        </span>
+      </div>
+    </div>
+  </div>
+</div>  -->
+
+<div class="product-card">
+  <div class="product-tumb">
+    <img [src]="product.image" alt="{{ product.title }}" />
+  </div>
+  <div class="product-details">
+    <div class="title">
+      <h4>{{ product.title }}</h4>
+    </div>
+    <div class="product-bottom-details">
+      <div class="product-price">{{ product.price | currency : "INR" }}</div>
+      <div class="wishlist">
+       
+        <span
+  class="material-icons wishlist-icon"
+  [ngClass]="{ active: isInWishlist() }"
+  (click)="toggleWishlist(product)"
+>
+  {{ isInWishlist() ? "favorite" : "favorite_border" }}
+</span>
+
+
+
+      </div>
+    </div>
+
+    <div class="actions-row">
+     
+      <span class="btn-container">
+        <button
+          *ngIf="cartCount === 0"
+          class="cart-action-btn"
+          (click)="addToCart()"
+        >
+          Add to Cart
+        </button>
+
+       
+        <div *ngIf="cartCount > 0" class="cart-actions">
+          <button class="cart-action-btn left" (click)="removeFromCart()">
+            −
+          </button>
+          <input type="text" [(ngModel)]="cartCount" readonly />
+          <button class="cart-action-btn right" (click)="addToCart()">+</button>
+        </div>
+      </span>
+
+
+<span class="view-details">
+
+  <button class="view-details-btn"> View <span class="material-icons open-in-new"
+          [routerLink]="['/products', product.id]">open_in_new</span></button>
+</span>
+
+
+
+
+
+    </div>
+  </div>
+</div>

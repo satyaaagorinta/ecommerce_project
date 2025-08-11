@@ -1,0 +1,43 @@
+<!-- <div class="sidebar">
+  <mat-icon
+    fontSet="material-icons-outlined"
+    [matBadge]="cartQuantity"
+    [matBadgeHidden]="cartQuantity === 0"
+    matBadgeOverlap="false"
+    class="magenta-badge"
+    [routerLink]="['/cart']"
+  >
+    shopping_cart
+  </mat-icon>
+
+  <mat-icon fontSet="material-icons-outlined" [routerLink]="['/wishlist']">
+    favorite_border
+  </mat-icon>
+
+  <mat-icon fontSet="material-icons-outlined"> account_circle </mat-icon>
+</div> -->
+
+<div class="sidebar">
+  <mat-icon
+    fontSet="material-icons-outlined"
+    [matBadge]="cartQuantity"
+    [matBadgeHidden]="cartQuantity === 0"
+    matBadgeOverlap="false"
+    class="magenta-badge thin-icon"
+    [routerLink]="['/cart']"
+  >
+    shopping_cart
+  </mat-icon>
+
+  <mat-icon
+    fontSet="material-icons-outlined"
+    class="thin-icon"
+    [routerLink]="['/wishlist']"
+  >
+    favorite_border
+  </mat-icon>
+
+  <mat-icon fontSet="material-icons-outlined" class="thin-icon">
+    account_circle
+  </mat-icon>
+</div>

@@ -1,0 +1,10 @@
+<ng-container *ngIf = "wishlistItems.length === 0">
+    <h4>Empty wishlist</h4>
+</ng-container>
+
+<ng-container *ngIf = "wishlistItems.length > 0">
+   <div class = "products-card" *ngFor = "let item of wishlistItems;let i =index">
+    <app-product-card [product]="item"></app-product-card>
+    </div>
+</ng-container>
+

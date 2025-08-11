@@ -1,0 +1,54 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "title": "Bright Blue Top",
+        "category": "Accessories",
+        "price": 2499,
+        "image": "assets/brightbluetop_core.jpeg",
+        "description": "Handcrafted leather backpack with adjustable straps and compartments."
+      },
+      {
+        "id": "2",
+        "title": "Brown Tube Top with Blazer",
+        "category": "Electronics",
+        "price": 5999,
+        "image": "assets/browntubetopwithblazer_edge.jpeg",
+        "description": "High-quality headphones with noise cancellation and long battery life."
+      },
+      {
+        "id": "3",
+        "title": "Pink Strappy Ruffle Top ",
+        "category": "Apparel",
+        "price": 799,
+        "image": "assets/A strappy sleeveless ruffled top hanging on a wooden hanger against a plain_20250715_011541_0000.jpg",
+        "description": "Soft, breathable oversized cotton T-shirt with minimalistic design."
+      },
+      {
+        "id": "4",
+        "title": "Brown Tube Top with Blazer",
+        "category": "Electronics",
+        "price": 5999,
+        "image": "assets/browntubetopwithblazer_edge.jpeg",
+        "description": "High-quality headphones with noise cancellation and long battery life."
+      },
+      {
+        "id": "5",
+        "title": "Pink Strappy Ruffle Top ",
+        "category": "Apparel",
+        "price": 799,
+        "image": "assets/A strappy sleeveless ruffled top hanging on a wooden hanger against a plain_20250715_011541_0000.jpg",
+        "description": "Soft, breathable oversized cotton T-shirt with minimalistic design."
+      },
+     
+      {
+        "id": "6",
+        "title": "LED Desk Lamp",
+        "category": "Office Supplies",
+        "price": 1199,
+        "image": "https://picsum.photos/id/1025/400/300",
+        "description": "Sleek LED desk lamp with adjustable brightness and USB port."
+      }
+    ]
+  }
+  

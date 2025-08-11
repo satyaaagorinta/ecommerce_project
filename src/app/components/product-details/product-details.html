@@ -1,0 +1,12 @@
+<ng-container *ngIf = "productDetails">
+    <button (click)="backToProductsList()"> back </button>
+
+    <div class="product-details">
+        
+        <span>{{productDetails.title}}</span>
+        <span>{{productDetails.description}}</span>
+        <span>{{productDetails.price|currency : "INR"}}</span>
+        <span><img [src]="productDetails.image"></span>
+       
+    </div>
+</ng-container>

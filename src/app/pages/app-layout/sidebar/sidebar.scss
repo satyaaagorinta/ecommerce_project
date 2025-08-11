@@ -1,0 +1,123 @@
+
+//   .sidebar {
+//   position: fixed;
+//    display: inline-block;
+ 
+//    top: 50%;
+//   left: 0;
+//    transform: translateY(-50%);
+//   background-color: #000000e3;
+//   padding: 15px 2px;
+//   border-radius: 0 1rem 1rem 0;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+//   align-items: center;
+  
+
+  
+
+// box-shadow:
+//     6px 0 20px 4px rgba(0, 0, 0, 0.06),
+//     12px 0 36px 8px rgba(0, 0, 0, 0.05);
+//   }
+
+
+//   ::ng-deep .magenta-badge .mat-badge-content {
+//     background-color: rgb(240, 95, 112) !important;
+//     color: white;
+//   }
+
+
+
+
+// mat-icon{
+//     font-family: 'Material Icons';
+//     font-size: 18px;
+//     color: #ffffff;
+//    position: relative;
+//     padding: 5px;
+//     margin-left: 2px;
+//     border-radius: 6px;
+//     cursor: pointer;
+//     transition: background-color 0.2s ease-in-out;
+//     color: #ffffff;
+//      &:hover {
+//       background-color: #5555556c;
+      
+//     }}
+  
+    
+// Parent container must be relative or static (default)
+.layout-container {
+  position: relative;
+}
+
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); // YES, use this!
+  width: 2.15rem;
+  padding: 1rem 0;
+  padding-top: 1.25rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  background-color: #000000e3;
+  z-index: 10;
+  
+  box-shadow:
+  6px 0px 32px 8px rgba(0, 0, 0, 0.142),
+  12px 0px 48px 12px rgba(0, 0, 0, 0.114);
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  // Remove height: 100vh;
+  // Vertical centering is handled by top: 50% and transform
+}
+
+// BADGE: Only style color, not size/placement!
+::ng-deep .magenta-badge .mat-badge-content {
+  background-color: rgb(240, 95, 112) !important;
+  color: white !important;
+
+   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+
+// Material icon: correct base size and minimal padding.
+mat-icon {
+  font-size: 1.2rem;
+  position: relative;
+  padding-right: 0.3rem;
+  margin: 0;
+
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+ 
+ &:hover {
+        
+color: rgb(251, 157, 157);      }
+  
+}
+
+
+
+.sidebar .thin-icon {
+  font-size: 1.2rem; /* Keep default size so layout isn't broken */
+  transform: scale(0.8); /* Makes stroke appear thinner */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+

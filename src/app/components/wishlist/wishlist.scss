@@ -1,0 +1,34 @@
+/* Wishlist container */
+:host {
+    display: block;
+    padding: 24px;
+    background-color: #fafafa;
+  }
+  
+  /* Empty wishlist message */
+  h4 {
+    text-align: center;
+    color: #888;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  
+  /* Grid layout for wishlist product cards */
+  .products-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Optional: You can add a subtle animation */
+  .products-card app-product-card {
+    transition: transform 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  
