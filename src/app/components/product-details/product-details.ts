@@ -4,10 +4,11 @@ import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { Product } from '../../models/products';
 import { Products } from '../../services/products';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-product-details',
-  imports: [CommonModule, RouterLink, NgClass, CurrencyPipe],
+  imports: [CommonModule, RouterLink, NgClass, CurrencyPipe,MatIconModule],
   templateUrl: './product-details.html',
   styleUrl: './product-details.scss',
 })

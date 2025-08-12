@@ -1,1 +1,21 @@
-<app-layout></app-layout>
+<!-- <app-layout></app-layout> -->
+
+<!-- 
+<ng-container  *ngIf="!isProductDetailsPage">
+    <app-layout></app-layout>
+</ng-container>
+
+
+<ng-container  *ngIf="isProductDetailsPage">
+    <router-outlet></router-outlet>
+</ng-container> -->
+
+
+
+<div *ngIf="!isProductDetailsPage">
+  <app-layout></app-layout>
+</div>
+
+<div *ngIf="isProductDetailsPage">
+  <router-outlet></router-outlet>
+</div>

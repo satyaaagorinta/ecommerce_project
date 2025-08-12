@@ -1,54 +1,123 @@
 {
-    "products": [
-      {
-        "id": "1",
-        "title": "Bright Blue Top",
-        "category": "Accessories",
-        "price": 2499,
-        "image": "assets/brightbluetop_core.jpeg",
-        "description": "Handcrafted leather backpack with adjustable straps and compartments."
-      },
-      {
-        "id": "2",
-        "title": "Brown Tube Top with Blazer",
-        "category": "Electronics",
-        "price": 5999,
-        "image": "assets/browntubetopwithblazer_edge.jpeg",
-        "description": "High-quality headphones with noise cancellation and long battery life."
-      },
-      {
-        "id": "3",
-        "title": "Pink Strappy Ruffle Top ",
-        "category": "Apparel",
-        "price": 799,
-        "image": "assets/A strappy sleeveless ruffled top hanging on a wooden hanger against a plain_20250715_011541_0000.jpg",
-        "description": "Soft, breathable oversized cotton T-shirt with minimalistic design."
-      },
-      {
-        "id": "4",
-        "title": "Brown Tube Top with Blazer",
-        "category": "Electronics",
-        "price": 5999,
-        "image": "assets/browntubetopwithblazer_edge.jpeg",
-        "description": "High-quality headphones with noise cancellation and long battery life."
-      },
-      {
-        "id": "5",
-        "title": "Pink Strappy Ruffle Top ",
-        "category": "Apparel",
-        "price": 799,
-        "image": "assets/A strappy sleeveless ruffled top hanging on a wooden hanger against a plain_20250715_011541_0000.jpg",
-        "description": "Soft, breathable oversized cotton T-shirt with minimalistic design."
-      },
-     
-      {
-        "id": "6",
-        "title": "LED Desk Lamp",
-        "category": "Office Supplies",
-        "price": 1199,
-        "image": "https://picsum.photos/id/1025/400/300",
-        "description": "Sleek LED desk lamp with adjustable brightness and USB port."
-      }
-    ]
-  }
-  
+  "products": [
+    {
+      "id": "8",
+      "title": "It-girl Tote Bag",
+      "category": "tote bags",
+      "price": 250,
+      "image": "assets/vandalarttotebag_silhoutte_vandal.jpg",
+      "collection": "vandal",
+
+      "description": "Girl silhoutte tote bag with a touch of street art"
+    },
+    {
+      "id": "9",
+      "title": "Graffitti Writting Tote Bag",
+      "category": "tote bags",
+      "price": 250,
+      "image": "assets/vandalarttotebag_scribbled_vandal.jpg",
+      "collection": "vandal",
+
+      "description": "Graffitti writting tote bag with a touch of street art"
+    },
+
+    {
+      "id": "10",
+      "title": "Drippy Paint Tote Bag",
+      "category": "tote bags",
+      "price": 250,
+      "image": "assets/vandalarttotebag_drippypaint_vandal.jpg",
+      "collection": "vandal",
+
+      "description": "Street art style metallic print tote bag with neon pink design"
+    },
+    {
+      "id": "5",
+      "title": "Grey Pinstriped Tube Top",
+      "category": "Tops",
+      "price": 699,
+      "image": "assets/greypinstrippedtubetop_core.png",
+      "collection": "core",
+      "description": "Grey Pinstriped Tube Top, regular length."
+    },
+    {
+      "id": "3",
+      "title": "Pink Strappy Ruffle Top",
+      "category": "Tops",
+      "price": 799,
+      "image": "assets/A strappy sleeveless ruffled top hanging on a wooden hanger against a plain_20250715_011541_0000.jpg",
+      "collection": "dreamy",
+      "description": "Soft, breathable minimalistic pink linen top"
+    },
+
+    {
+      "id": "4",
+      "title": "Red Self Designed Top",
+      "category": "Tops",
+      "price": 999,
+      "image": "assets/boldredswetaheartnecttop_dreamy.jpg",
+      "collection": "dreamy",
+      "description": "Strappy sweatheart neck top with floral print."
+    },
+    {
+      "id": "12",
+      "title": "Minimalistic Metallic Tote Bag",
+      "category": "tote bags",
+      "price": 250,
+      "image": "assets/vandalarttotebag_neonpinkoutline_vandal.jpg",
+      "collection": "vandal",
+
+      "description": "Minimalistic Metallic Tote Bag"
+    },
+
+    {
+      "id": "11",
+      "title": "Paint Blot Tote Bag",
+      "category": "tote bags",
+      "price": 250,
+      "image": "assets/vandalarttotebag_metallicpaintblot_vandal.jpg",
+      "collection": "vandal",
+
+      "description": "Street art style metallic print tote bag with paint blot design"
+    },
+
+    {
+      "id": "6",
+      "title": "LED Desk Lamp",
+      "category": "Office Supplies",
+      "price": 1199,
+      "image": "https://picsum.photos/id/1025/400/300",
+      "collection": "edge",
+
+      "description": "Sleek LED desk lamp with adjustable brightness and USB port."
+    },
+    {
+      "id": "7",
+      "title": "Pastel Blue Peplum Tube Top",
+      "category": "Tops",
+      "price": 1199,
+      "image": "assets/pastelbluepeplumtube2_edge.png",
+      "collection": "edge",
+
+      "description": "Minimalistic blue peplum tube top,regular length"
+    },
+    {
+      "id": "1",
+      "title": "Bright Blue Top",
+      "category": "Tops",
+      "price": 600,
+      "image": "assets/brightbluetop_core.jpeg",
+      "collection": "core",
+      "description": "Handcrafted leather backpack with adjustable straps and compartments."
+    },
+    {
+      "id": "2",
+      "title": "Brown Tube Top with Blazer",
+      "category": "formals,blazers",
+      "price": 1799,
+      "image": "assets/browntubetopwithblazer_edge.jpeg",
+      "collection": "edge",
+      "description": "Brown tube top and blazer set"
+    }
+  ]
+}

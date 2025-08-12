@@ -5,7 +5,8 @@ export interface Product{
     price:number;
     image:string;
     description:string;
-    quantity?:number
+    quantity?:number;
+    collection:string;
 }
 
 export interface AddRemoveCartEvent{

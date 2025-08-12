@@ -59,7 +59,8 @@ export class Products {
       (p) =>
         p.title.toLocaleLowerCase().includes(lowerCaseKeyword) ||
         p.description.toLocaleLowerCase().includes(lowerCaseKeyword) ||
-        p.category.toLocaleLowerCase().includes(lowerCaseKeyword)
+        p.category.toLocaleLowerCase().includes(lowerCaseKeyword)||
+        p.collection.toLocaleLowerCase().includes(lowerCaseKeyword)
     );
     this.filteredProducts.next(filteredList);
   }
