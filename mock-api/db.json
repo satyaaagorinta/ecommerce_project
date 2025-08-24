@@ -81,16 +81,7 @@
       "description": "Street art style metallic print tote bag with paint blot design"
     },
 
-    {
-      "id": "6",
-      "title": "LED Desk Lamp",
-      "category": "Office Supplies",
-      "price": 1199,
-      "image": "https://picsum.photos/id/1025/400/300",
-      "collection": "edge",
-
-      "description": "Sleek LED desk lamp with adjustable brightness and USB port."
-    },
+   
     {
       "id": "7",
       "title": "Pastel Blue Peplum Tube Top",

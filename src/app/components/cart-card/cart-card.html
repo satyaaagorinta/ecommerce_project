@@ -1,4 +1,4 @@
-<div class="product-card">
+<!-- <div class="product-card">
     <span> {{product.title}}
     </span>
    <span>Rs{{product.price|currency:'INR'}}</span>
@@ -12,4 +12,55 @@
     </div>
 
 
+</div> -->
+
+<div class="card">
+  <div class="cart-img-container">
+    <div class="cart-img">
+      <img [src]="product.image" />
+    </div>
+  </div>
+  <div class="card-info">
+    <div class="card-header">
+      {{ product.title }}
+    </div>
+    <div class="price-section">Rs.{{ product.price | currency : "INR" }}</div>
+    <div class="cart-info">
+      <div class="info">
+
+
+
+        <div class="actions-row">
+         
+<span class="btn-bg">
+            <div class="cart-actions">
+              <button
+                class="cart-action-btn-left"
+                (click)="addRemoveCartEvent(cartEventState.Remove)"
+              >
+                −
+              </button>
+              <span class="cart-input">{{ quantity }}</span>
+              <!-- <input type="text" [(ngModel)]="cartCount" readonly /> -->
+              <button
+                class="cart-action-btn-right"
+                (click)="addRemoveCartEvent(cartEventState.Add)"
+              >
+                +
+              </button>
+            </div>
+        </span>
+        </div>
+
+        <!-- <div class="cart-actions">
+                    <div class="add-remove-cart">
+                        <button class="remove-cart-btn" (click)="addRemoveCartEvent(cartEventState.Remove)">-</button>
+                        
+                        <span class="cart-input">{{quantity}}</span>
+                        <button class="add-cart-btn" (click)="addRemoveCartEvent(cartEventState.Add)">+</button>
+                    </div>
+                </div> -->
+      </div>
+    </div>
+  </div>
 </div>

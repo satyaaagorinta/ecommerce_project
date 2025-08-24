@@ -1,10 +1,24 @@
+
+<div class="products-container box-size-full-percent">
+
 <ng-container *ngIf = "wishlistItems.length === 0">
     <h4>Empty wishlist</h4>
 </ng-container>
 
 <ng-container *ngIf = "wishlistItems.length > 0">
+
+    <h4>Your Wishlist</h4>
+    <hr>
+  <div class="products-grid">
+
+   
+
+    
    <div class = "products-card" *ngFor = "let item of wishlistItems;let i =index">
     <app-product-card [product]="item"></app-product-card>
     </div>
-</ng-container>
 
+
+</div>
+</ng-container>
+</div>

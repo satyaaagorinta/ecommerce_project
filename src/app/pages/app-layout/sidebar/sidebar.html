@@ -4,25 +4,6 @@
     [matBadge]="cartQuantity"
     [matBadgeHidden]="cartQuantity === 0"
     matBadgeOverlap="false"
-    class="magenta-badge"
-    [routerLink]="['/cart']"
-  >
-    shopping_cart
-  </mat-icon>
-
-  <mat-icon fontSet="material-icons-outlined" [routerLink]="['/wishlist']">
-    favorite_border
-  </mat-icon>
-
-  <mat-icon fontSet="material-icons-outlined"> account_circle </mat-icon>
-</div> -->
-
-<div class="sidebar">
-  <mat-icon
-    fontSet="material-icons-outlined"
-    [matBadge]="cartQuantity"
-    [matBadgeHidden]="cartQuantity === 0"
-    matBadgeOverlap="false"
     class="magenta-badge thin-icon"
     [routerLink]="['/cart']"
   >
@@ -40,4 +21,68 @@
   <mat-icon fontSet="material-icons-outlined" class="thin-icon">
     account_circle
   </mat-icon>
+</div> -->
+
+
+
+<div class="sidebar">
+  <!-- Cart Icon with Badge -->
+  <span
+    fontSet="material-icons-outlined"
+    [matBadge]="cartQuantity"
+    [matBadgeHidden]="cartQuantity === 0"
+    matBadgeOverlap="false"
+    class="magenta-badge thin-icon icon-wrapper"
+    [routerLink]="['/cart']"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.25"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather bag"
+    >
+      <path d="M6 2l1 4h10l1-4z"></path>
+      <path d="M3 6h18v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+      <path d="M16 10a4 4 0 0 1-8 0"></path>
+    </svg>
+  </span>
+
+  <!-- Wishlist Icon -->
+  <span class="icon-wrapper" [routerLink]="['/wishlist']">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.25"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather heart"
+    >
+      <path
+        d="M20.8 4.6c-1.8-1.8-4.8-1.8-6.6 0l-.8.8-.8-.8c-1.8-1.8-4.8-1.8-6.6 0s-1.8 4.8 0 6.6l7.4 7.4 7.4-7.4c1.8-1.8 1.8-4.8 0-6.6z"
+      />
+    </svg>
+  </span>
+
+  <!-- Clean Profile Icon -->
+  <span class="icon-wrapper">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.25"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather profile"
+    >
+      <circle cx="12" cy="8" r="4"></circle>
+      <path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"></path>
+    </svg>
+  </span>
 </div>

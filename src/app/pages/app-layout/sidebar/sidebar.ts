@@ -7,6 +7,15 @@ import { Products } from '../../../services/products';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBadge } from '@angular/material/badge';
 import { MatSidenavModule } from '@angular/material/sidenav';
+// import { FeatherModule } from 'angular-feather';
+// import { User, Heart, ShoppingBag } from 'angular-feather/icons';
+
+
+
+
+
+
+
 @Component({
   selector: 'app-sidebar',
   imports: [RouterLink,MatBadgeModule,MatButtonModule,MatIconModule,MatSidenavModule],

@@ -1,57 +1,7 @@
-<!-- <ng-container *ngIf = "productDetails">
-    <button (click)="backToProductsList()"> back </button>
-
-    <div class="product-details">
-        
-        <span>{{productDetails.title}}</span>
-        <span>{{productDetails.description}}</span>
-        <span>{{productDetails.price|currency : "INR"}}</span>
-        <span><img [src]="productDetails.image"></span>
-       
-    </div>
-</ng-container> -->
-
-
-
-
-
-<!-- <ng-container *ngIf="productDetails">
-  <button class="back-btn" (click)="backToProductsList()">← Back</button>
-
-  <div class="product-details">
-   
-    <div class="product-info">
-      <h1 class="product-title">{{ productDetails.title }}</h1>
-      <p class="product-description">{{ productDetails.description }}</p>
-      <p class="product-price">{{ productDetails.price | currency : "INR" }}</p>
-      <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-
-   
-    <div class="product-image">
-      <img [src]="productDetails.image" alt="{{ productDetails.title }}">
-    </div>
-  </div>
-</ng-container> -->
-
-
-
-
-<!-- <div class="product-card" *ngIf="productDetails">
-  <div class="product-info">
-    <h1>{{ productDetails.title }}</h1>
-    <p>{{ productDetails.description }}</p>
-    <div class="price">{{ productDetails.price | currency: 'INR' }}</div>
-    <button>Add to Cart</button>
-  </div>
-  <div class="product-image">
-    <img [src]="productDetails.image" alt="{{ productDetails.title }}">
-  </div>
-</div> -->
 
 
 <ng-container *ngIf="productDetails">
-  <!-- <button class="back-btn" (click)="backToProductsList()"></button> -->
+ 
 <button class="back-btn" (click)="backToProductsList()"><mat-icon>cancel</mat-icon></button>
 
   <div class="product-card" *ngIf="productDetails">
@@ -64,7 +14,53 @@
     <h1>{{ productDetails.title }}</h1>
     <p>{{ productDetails.description }}</p>
     <div class="price">{{ productDetails.price | currency: 'INR' }}</div>
+    
     <button>Add to Cart</button>
+         
+          
+
+  </div>
+</div>
+
+</ng-container>
+
+
+
+<!-- <ng-container *ngIf="productDetails">
+ 
+<button class="back-btn" (click)="backToProductsList()"><mat-icon>cancel</mat-icon></button>
+
+  <div class="product-card" *ngIf="productDetails">
+  
+  <div class="product-image">
+    <img [src]="productDetails.image" alt="{{ productDetails.title }}">
+  </div>
+
+  <div class="product-info">
+    <h1>{{ productDetails.title }}</h1>
+    <p>{{ productDetails.description }}</p>
+    <div class="price">{{ productDetails.price | currency: 'INR' }}</div>
+    <div class="actions-row">
+      
+        <button
+          *ngIf="cartCount === 0"
+          class="cart-action-btn"
+          (click)="addToCart()"
+        >
+          Add to Cart
+        </button>
+
+       
+        <div *ngIf="cartCount > 0" class="cart-actions">
+          <button class="cart-action-btn left" (click)="removeFromCart()">
+            −
+          </button>
+          <input type="text" [(ngModel)]="cartCount" readonly />
+          <button class="cart-action-btn right" (click)="addToCart()">+</button>
+        </div>
+      
+
+    </div>
   </div>
 </div>
 
@@ -77,8 +73,4 @@
 
 
 
-
-
-
-
-
+ -->

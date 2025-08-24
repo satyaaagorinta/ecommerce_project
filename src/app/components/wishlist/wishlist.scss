@@ -1,9 +1,9 @@
 /* Wishlist container */
-:host {
-    display: block;
-    padding: 24px;
-    background-color: #fafafa;
-  }
+// :host {
+//     display: block;
+//     padding: 24px;
+//     background-color: #fafafa;
+//   }
   
   /* Empty wishlist message */
   h4 {
@@ -14,21 +14,58 @@
     margin-top: 50px;
   }
   
-  /* Grid layout for wishlist product cards */
-  .products-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+//   /* Grid layout for wishlist product cards */
+//   .products-card {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 20px;
+//     justify-content: center;
+//     margin-top: 20px;
+//   }
+  
+//   /* Optional: You can add a subtle animation */
+//   .products-card app-product-card {
+//     transition: transform 0.2s ease-in-out;
+  
+//     &:hover {
+//       transform: scale(1.02);
+//     }
+//   }
+  
+
+
+  
+
+
+
+.products-container {
+  overflow: auto;
+.empty-wishlist-img{
+    display: flex; justify-content: center;
+    flex-direction: column;
+  
+   img { width: 30%;align-self: center;margin-top: 3rem; }
+
+   
+   h4{
+    color: #999999e0;
+    text-align: center;
+   }
   }
   
-  /* Optional: You can add a subtle animation */
-  .products-card app-product-card {
-    transition: transform 0.2s ease-in-out;
-  
-    &:hover {
-      transform: scale(1.02);
-    }
+  .products-grid {
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // gap: 1rem;
+    // padding: 2rem;
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px;
+  justify-content: center;
+   
   }
-  
+}

@@ -1,14 +1,17 @@
-
+<!-- class="bg-video" -->
   <video
+      #bgVideo
+    
+
     autoplay
     muted
     loop
     playsinline
     class="background-video"
-    #bgVideo
+   
      preload="auto"
   >
-    <source src="assets/videos/homepage.mp4" type="video/mp4" />
+    <source src="assets/videos/DREAM (1240 x 389 px).mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
@@ -16,3 +19,34 @@
     <button class="header-nav-btn" [routerLink]="['/products']">Store</button>
   </div> -->
 
+<!-- <app-hero></app-hero> -->
+
+@defer (on viewport) {
+  <app-collections></app-collections>
+} @placeholder {
+  <section class="placeholder">Loading collections…</section>
+} @loading {
+  <section class="placeholder">Fetching collections…</section>
+}
+
+<!--
+@defer (on viewport) {
+  <app-featured-products></app-featured-products>
+} @placeholder {
+  <section class="placeholder">Loading featured products…</section>
+}
+
+@defer (on viewport; prefetch) {
+  <app-testimonials></app-testimonials>
+} @placeholder {
+  <section class="placeholder">Loading testimonials…</section>
+}
+-->
+
+@defer (on viewport) {
+  <app-footer></app-footer>
+} @placeholder {
+  <section class="placeholder">Loading footer…</section>
+} @loading {
+  <section class="placeholder">Fetching footer…</section>
+}

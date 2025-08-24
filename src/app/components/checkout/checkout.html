@@ -1,1 +1,237 @@
-<p>checkout works!</p>
+<div class = "checkout-container">
+  <div class = "checkout-card">
+
+
+<form [formGroup]="billingForm" class="billing-details" (ngSubmit)="onSubmit()">
+  <h1>Billing Details</h1>
+<hr>
+  
+  <mat-grid-list
+    class="personal-details"
+    cols="3"
+    rowHeight="5rem"
+    gutterSize="2rem"
+  >
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput  formControlName="firstName" placeholder="firstname" required />
+        <mat-error *ngIf = "billingForm.get('firstName')?.hasError('required') && billingForm.get('firstName')?.touched">
+            First Name is required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="lastname" formControlName="lastName" required />
+        <mat-error *ngIf = "billingForm.get('lastName')?.hasError('required') && billingForm.get('lastName')?.touched">
+           Last Name is required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput placeholder="10 digits" formControlName="mobileNumber" required />
+        <mat-error *ngIf = "billingForm.get('mobileNumber')?.hasError('required') && billingForm.get('mobileNumber')?.touched">
+            Mobile Number is required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="xyz@example.com" formControlName="email" required />
+        <mat-error *ngIf = "billingForm.get('email')?.hasError('required') && billingForm.get('email')?.touched">
+           Email is required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+      <mat-form-field appearance="fill" class="full-width" floatLabel="always" class = "form-full-width">
+        <mat-label>Address Line-1</mat-label>
+        <input matInput placeholder="" formControlName="billingAdressLine1" required />
+        <mat-error *ngIf = "billingForm.get('billingAdressLine1')?.hasError('required') && billingForm.get('billingAdressLine1')?.touched">
+            Address is required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+      <mat-form-field appearance="fill" class="full-width" floatLabel="always" class = "form-full-width">
+        <mat-label>Address Line-2</mat-label>
+        <input matInput placeholder="" formControlName="billingAdressLine2" required />
+        <mat-error *ngIf = "billingForm.get('billingAdressLine2')?.hasError('required') && billingForm.get('billingAdressLine2')?.touched">
+            Address is required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="Country" formControlName="billingCountry" required />
+        <mat-error *ngIf = "billingForm.get('billingCountry')?.hasError('required') && billingForm.get('billingCountry')?.touched">
+             required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="State" formControlName="billingState" required />
+        <mat-error *ngIf = "billingForm.get('billingState')?.hasError('required') && billingForm.get('billingState')?.touched">
+            required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="city" formControlName="billingCity" required />
+        <mat-error *ngIf = "billingForm.get('billingCity')?.hasError('required') && billingForm.get('billingCity')?.touched">
+             required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Postal Code</mat-label>
+        <input matInput placeholder="postal code" formControlName="billingPostalcode" required />
+        <mat-error *ngIf = "billingForm.get('billingPostalcode')?.hasError('required') && billingForm.get('billingPostalcode')?.touched">
+             required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+<h1>Shipping Details</h1>
+<hr>
+
+ <mat-checkbox class="checkbox" (change)="onCheckboxChange($event)">Same as Above</mat-checkbox>
+  <div *ngIf="!isChecked">
+ <mat-grid-list
+    class="personal-details"
+    cols="3"
+    rowHeight="5rem"
+    gutterSize="2rem"
+  > 
+ 
+ <mat-grid-tile >
+      <mat-form-field appearance="fill" class="full-width" floatLabel="always" class = "form-full-width">
+        <mat-label>Address Line-1</mat-label>
+        <input matInput placeholder="" formControlName= "shippingAdressLine1" required  />
+        <mat-error *ngIf = "billingForm.get('shippingAdressLine1')?.hasError('required') && billingForm.get('shippingAdressLine1')?.touched">
+            required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+      <mat-form-field appearance="fill" class="full-width" floatLabel="always" class = "form-full-width">
+        <mat-label>Address Line-2</mat-label>
+        <input matInput placeholder="" formControlName= "shippingAdressLine2" required />
+        <mat-error *ngIf = "billingForm.get('shippingAdressLine2')?.hasError('required') && billingForm.get('shippingAdressLine2')?.touched">
+            required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="Country" formControlName= "shippingCountry" required />
+        <mat-error *ngIf = "billingForm.get('shippingCountry')?.hasError('required') && billingForm.get('shippingCountry')?.touched">
+          required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="State" formControlName= "shippingState" required />
+        <mat-error *ngIf = "billingForm.get('shippingState')?.hasError('required') && billingForm.get('shippingState')?.touched">
+            required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="city" formControlName= "shippingCity"  required />
+        <mat-error *ngIf = "billingForm.get('shippingCity')?.hasError('required') && billingForm.get('shippingCity')?.touched">
+             required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Postal Code</mat-label>
+        <input matInput placeholder="postal code" formControlName= "shippingPostalcode" required  />
+        <mat-error *ngIf = "billingForm.get('shippingPostalcode')?.hasError('required') && billingForm.get('shippingPostalcode')?.touched">
+           required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+ 
+</mat-grid-list>
+</div>
+
+<h1>Payment Details</h1>
+<hr>
+ <mat-grid-list
+    class="payment-details"
+    cols="3"
+     rowHeight="5rem"
+    gutterSize="2rem"
+  > 
+ 
+ <mat-grid-tile >
+      <mat-form-field appearance="fill" class="full-width" floatLabel="always" class = "form-full-width">
+        <mat-label>Card Number</mat-label>
+        <input matInput placeholder="" formControlName= "cardNumber" required  />
+        <mat-error *ngIf = "billingForm.get('cardNumber')?.hasError('required') && billingForm.get('cardNumber')?.touched">
+            required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+      <mat-form-field appearance="fill" class="full-width" floatLabel="always" class = "form-full-width">
+        <mat-label>cvv</mat-label>
+        <input matInput placeholder="" formControlName= "cvv" required />
+        <mat-error *ngIf = "billingForm.get('cvv')?.hasError('required') && billingForm.get('cvv')?.touched">
+            required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field floatLabel="always" class = "form-full-width">
+        <mat-label>Expiry Date</mat-label>
+        <input matInput placeholder="" formControlName= "expiryDate" required />
+        <mat-error *ngIf = "billingForm.get('expiryDate')?.hasError('required') && billingForm.get('expiryDate')?.touched">
+          required
+        </mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+
+   
+</mat-grid-list>
+
+<button class="submit-btn" color="primary" type="submit" >
+    Submit
+  </button>
+</form>
+</div>
+</div>
