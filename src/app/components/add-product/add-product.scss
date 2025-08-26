@@ -1,0 +1,153 @@
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+hr {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.select-btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 7rem;
+  margin-left: 25rem;
+  margin-right: 25rem;
+  padding: 7rem;
+  background-color: #dcdfdfb1;
+  border-radius: 30px;
+
+  button {
+    min-width: 180px;
+    width: auto;
+    padding: 20px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+.add-product-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  height: 33rem;
+  width: 50rem;
+  
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #f1f2f3;
+  border-radius: 30px;
+}
+
+/* 💡 Container for both form and image */
+.add-product-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+/* 💡 Left form section */
+.add-product-form {
+  flex: 1;
+
+  form {
+    width: 100%;
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    button[type="submit"] {
+      align-self: flex-start;
+      margin-top: 1rem;
+      width: auto;
+      padding: 10px;
+    }
+  }
+}
+
+/* 💡 Right image preview section */
+.add-product-img-display,
+.update-product-img-display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+}
+.error-msg {
+  color: #7e8082;
+  font-size: medium;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 6px 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    background: transparent;
+    margin-left: 2px;
+  }
+
+  button {
+    background-color: #1976d26f;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #125da461;
+    }
+  }
+}
+
+
+

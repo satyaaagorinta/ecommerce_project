@@ -68,4 +68,18 @@ export class Products {
   searchReset(products:Product[]){
     this.filteredProducts.next(products);
   }
+
+
+addProduct(newProduct: Product): Observable<Product> {
+    return this.httpClient.post<Product>(this.url, newProduct);
+  }
+
+  fetchProductForm(id: string): Observable<Product> {
+    return this.httpClient.get<Product>(`${this.url}/${id}`);
+  }
+  updateProduct(product: Product): Observable<Product> {
+    return this.httpClient.put<Product>(`${this.url}/${product.id}`, product);
+  }
+
+
 }

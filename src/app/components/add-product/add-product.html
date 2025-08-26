@@ -1,1 +1,314 @@
-<p>add-product works!</p>
+<div
+  *ngIf="displayProductOperation === ProductOperation.Select"
+  class="select-btn-container"
+>
+  <button
+    mat-fab
+    color="primary"
+    aria-label="Update Existing Product"
+    (click)="displayAddProduct()"
+  >
+    Add New Product
+  </button>
+  <button
+    mat-fab
+    color="primary"
+    aria-label="Add Product"
+    (click)="displayUpdateProduct()"
+  >
+    Update Existing Product
+  </button>
+</div>
+<div
+  class="add-product-page"
+  *ngIf="displayProductOperation === ProductOperation.AddNew"
+>
+  <h1>Add a new product</h1>
+  <hr />
+  <div class="add-product-card">
+    <div class="add-product-container">
+      <div class="add-product-form">
+        <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+          <mat-grid-list
+            class="form-fields"
+            cols="1"
+            rowHeight="5rem"
+            gutterSize="2rem"
+          >
+            <mat-form-field floatLabel="always" class="form-full-width">
+              <mat-label>Product Title</mat-label>
+              <input
+                matInput
+                formControlName="title"
+                placeholder="Product Title"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  addProductForm.get('title')?.hasError('required') &&
+                  addProductForm.get('title')?.touched
+                "
+              >
+                Product Title is required
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field floatLabel="always" class="form-full-width">
+              <mat-label>Product Category</mat-label>
+              <input
+                matInput
+                formControlName="category"
+                placeholder="category"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  addProductForm.get('category')?.hasError('required') &&
+                  addProductForm.get('category')?.touched
+                "
+              >
+                Product Category is required
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field floatLabel="always" class="form-full-width">
+              <mat-label>Price</mat-label>
+              <input
+                matInput
+                formControlName="price"
+                placeholder="Price"
+                type="number"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  addProductForm.get('price')?.hasError('required') &&
+                  addProductForm.get('price')?.touched
+                "
+              >
+                Price is required
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field floatLabel="always" class="form-full-width">
+              <mat-label>Image</mat-label>
+              <input
+                matInput
+                formControlName="image"
+                placeholder="url"
+                [(ngModel)]="imageUrl"
+                required
+              />
+              <mat-error
+                *ngIf="
+                  addProductForm.get('image')?.hasError('required') &&
+                  addProductForm.get('image')?.touched
+                "
+              >
+                Img src is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always" class="form-full-width">
+              <mat-label>Product Description</mat-label>
+              <textarea
+                matInput
+                formControlName="description"
+                placeholder="describe the product"
+              ></textarea>
+              <mat-error
+                *ngIf="
+                  addProductForm.get('description')?.hasError('required') &&
+                  addProductForm.get('description')?.touched
+                "
+              >
+                Product description is required
+              </mat-error>
+            </mat-form-field>
+
+            <button
+              mat-fab
+              color="primary"
+              aria-label="Add Product"
+              type="submit"
+            >
+              <mat-icon>add</mat-icon>
+              Add Product
+            </button>
+          </mat-grid-list>
+        </form>
+      </div>
+      <div class="add-product-img-display">
+        <div *ngIf="imageUrl">
+          <p>Preview</p>
+          <img [src]="imageUrl" alt="Image Preview" width="300" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="displayProductOperation === ProductOperation.Update">
+  <h1>Update product</h1>
+  <hr />
+  <div class="add-product-card">
+    <div class="add-product-container">
+      <div class="add-product-form">
+        <form>
+          <ng-container *ngIf="notFound === DisplayProductForm.None">
+            <span class="search-bar">
+              <label>ProductId:</label>
+              <input
+                matInput
+                [(ngModel)]="idInput"
+                placeholder="enter product id"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <button (click)="fetchProduct()">Find</button></span
+            >
+          </ng-container>
+          <ng-container *ngIf="notFound === DisplayProductForm.False">
+            <span class="search-bar">
+              <label>ProductId:</label>
+              <input
+                matInput
+                [(ngModel)]="idInput"
+                placeholder="enter product id"
+                [ngModelOptions]="{ standalone: true }"
+                required
+              />
+              <button (click)="fetchProduct()">Find</button></span
+            >
+            <p class="error-msg">Product not found!</p>
+          </ng-container>
+        </form>
+
+        <ng-container *ngIf="notFound === DisplayProductForm.True">
+          <span class="search-bar">
+            <label>ProductId :</label>
+            <input
+              matInput
+              [(ngModel)]="idInput"
+              placeholder="enter product id"
+              [ngModelOptions]="{ standalone: true }"
+              required
+            />
+            <button (click)="fetchProduct()">Find</button></span
+          >
+          <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+            <mat-grid-list
+              class="form-fields"
+              cols="1"
+              rowHeight="5rem"
+              gutterSize="2rem"
+            >
+              <mat-form-field floatLabel="always" class="form-full-width">
+                <mat-label>Product Title</mat-label>
+                <input
+                  matInput
+                  formControlName="title"
+                  placeholder="Product Title"
+                  required
+                />
+                <mat-error
+                  *ngIf="
+                    addProductForm.get('title')?.hasError('required') &&
+                    addProductForm.get('title')?.touched
+                  "
+                >
+                  Product Title is required
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field floatLabel="always" class="form-full-width">
+                <mat-label>Product Category</mat-label>
+                <input
+                  matInput
+                  formControlName="category"
+                  placeholder="category"
+                  required
+                />
+                <mat-error
+                  *ngIf="
+                    addProductForm.get('category')?.hasError('required') &&
+                    addProductForm.get('category')?.touched
+                  "
+                >
+                  Product Category is required
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field floatLabel="always" class="form-full-width">
+                <mat-label>Price</mat-label>
+                <input
+                  matInput
+                  formControlName="price"
+                  placeholder="Price"
+                  type="number"
+                  required
+                />
+                <mat-error
+                  *ngIf="
+                    addProductForm.get('price')?.hasError('required') &&
+                    addProductForm.get('price')?.touched
+                  "
+                >
+                  Price is required
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field floatLabel="always" class="form-full-width">
+                <mat-label>Image</mat-label>
+                <input
+                  matInput
+                  formControlName="image"
+                  placeholder="url"
+                  [(ngModel)]="imageUrl"
+                  required
+                />
+                <mat-error
+                  *ngIf="
+                    addProductForm.get('image')?.hasError('required') &&
+                    addProductForm.get('image')?.touched
+                  "
+                >
+                  Img src is required
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field floatLabel="always" class="form-full-width">
+                <mat-label>Product Description</mat-label>
+                <textarea
+                  matInput
+                  formControlName="description"
+                  placeholder="describe the product"
+                ></textarea>
+                <mat-error
+                  *ngIf="
+                    addProductForm.get('description')?.hasError('required') &&
+                    addProductForm.get('description')?.touched
+                  "
+                >
+                  Product description is required
+                </mat-error>
+              </mat-form-field>
+
+              <button
+                mat-fab
+                color="primary"
+                aria-label="Add Product"
+                type="submit"
+              >
+                Update Product
+              </button>
+            </mat-grid-list>
+          </form>
+        </ng-container>
+      </div>
+      <div class="update-product-img-display">
+        <div *ngIf="imageUrl">
+          <p>Preview</p>
+          <img [src]="imageUrl" alt="Image Preview" width="300" />
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+
+

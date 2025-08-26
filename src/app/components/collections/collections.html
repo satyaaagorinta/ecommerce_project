@@ -1,1 +1,52 @@
-<p>collections works!</p>
+<!-- <div class="cards-container">
+  <div class="card">
+    <h3>Card 1</h3>
+    <p>This is card one.</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 2</h3>
+    <p>This is card two.</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 3</h3>
+    <p>This is card three.</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 4</h3>
+    <p>This is card four.</p>
+  </div>
+
+  <div class="card">
+    <h3>Card 5</h3>
+    <p>This is card five.</p>
+  </div>
+</div>
+ -->
+
+
+
+ <!-- home.component.html -->
+  <div class="cards-container">
+<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'dreamy' }">
+  <h3>DREAMY</h3><p>linens</p>
+</a>
+
+<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'edge' }">
+  <h3>Edge</h3><p>cformals</p>
+</a>
+
+<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'core' }">
+  <h3>Core</h3><p>basics</p>
+</a>
+
+<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'vandal' }">
+  <h3>Vandal</h3><p>inspired steetstyle designs</p>
+</a>
+
+<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'hologram' }">
+  <h3>Hologram</h3><p>Party wear</p>
+</a>
+</div>

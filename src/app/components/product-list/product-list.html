@@ -27,11 +27,30 @@
   </div>
 </div>
 
-<div *ngIf="productArray.length > 0" class="product-list">
+<!-- <div *ngIf="productArray.length > 0" class="product-list">
     <app-product-card
       *ngFor="let product of productArray; let i = index"
       [product]="product"
       
     ></app-product-card>
-  </div>
+  </div> -->
+
+<section class="header" *ngIf="activeCollection">
+  <h2 class="title">
+    Products — {{ activeCollection }}
+    <a [routerLink]="['/products']" class="clear-link">Clear</a>
+  </h2>
+</section>
+
+<div *ngIf="filteredProductArray.length > 0; else empty" class="product-list">
+  <app-product-card
+    *ngFor="let product of filteredProductArray; let i = index"
+    [product]="product">
+  </app-product-card>
+</div>
+
+<ng-template #empty>
+  <p>No products found.</p>
+</ng-template>
+
 
