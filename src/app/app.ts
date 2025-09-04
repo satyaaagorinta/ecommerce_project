@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Layout } from './pages/app-layout/layout/layout';
 
@@ -6,6 +6,7 @@ import { Layout } from './pages/app-layout/layout/layout';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',

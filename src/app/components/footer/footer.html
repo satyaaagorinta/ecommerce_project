@@ -1,1 +1,45 @@
-<p>footer works!</p>
+<footer class="footer">
+  <owl-carousel-o [options]="options" class="gallery__carousel" >
+    <ng-template carouselSlide *ngFor="let src of items">
+      <a href="#" class="gallery__photo" aria-label="Open Instagram photo">
+        <img [src]="src" alt="" loading="lazy" />
+        <div class="gallery__fade">
+          <i class="gallery__icon" data-feather="instagram" aria-hidden="true"></i>
+        </div>
+      </a>
+    </ng-template>
+  </owl-carousel-o>
+
+  <div class="footer__redes">
+    <ul class="footer__redes-wrapper">
+      <li>
+        <a href="#" class="footer__link">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          facebook
+        </a>
+      </li>
+      <li>
+        <a href="#" class="footer__link">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+          twitter
+        </a>
+      </li>
+      <li>
+        <a href="#" class="footer__link">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          instagram
+        </a>
+      </li>
+      <li>
+        <a href="#" class="footer__link">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+          youtube
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="separador" role="presentation"></div>
+  <p class="footer__texto">Copyright © 2025</p>
+</footer>
+

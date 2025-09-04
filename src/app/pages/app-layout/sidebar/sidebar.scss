@@ -59,13 +59,36 @@
 .feather {
   //  color: rgb(251, 157, 157);
 
-  color: white;
+    color: white;
 
   padding-right: 0.3rem;
   margin: 0;
 
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 .icon-wrapper {
@@ -96,3 +119,19 @@
   padding-left: 0.1rem;
   margin-bottom: 0.05rem;
 }
+
+::selection { background-color: #C3CFE2; }
+
+
+  // .feather:hover {
+  //   background: -webkit-radial-gradient(33% 100% circle, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  //   background: radial-gradient(circle at 33% 100%, #FED373 4%, #F15245 30%, #D92E7F 62%, #9B36B7 85%, #515ECF);
+  //   -webkit-background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  // }
+
+  .feather:hover{
+    color: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+   
+    transition: 0.3s ease-in-out;
+  }

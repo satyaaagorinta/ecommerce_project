@@ -6,9 +6,12 @@ import { AfterViewInit, ElementRef, ViewChild , NgZone} from '@angular/core';
 import { Router } from '@angular/router';
 import { Footer } from '../footer/footer';
 import { Collections } from '../collections/collections';
+import { Sliderpage } from '../sliderpage/sliderpage';
+
+
 @Component({
   selector: 'app-home',
-  imports: [Layout,RouterLink,Footer,Collections],
+  imports: [Layout,RouterLink,Footer,Collections,Sliderpage],
   templateUrl: './home.html',
   styleUrl: './home.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -64,6 +67,28 @@ export class Home implements AfterViewInit {
     }
 
     start();
+
+
+ const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log('Visible:', entry.target);
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // ✅ animate once
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    
+    setTimeout(() => {
+  document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+    observer.observe(el);
+  });
+}, 500); 
+
   }
 
 scrollTo(id: string) {

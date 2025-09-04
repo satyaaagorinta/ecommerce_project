@@ -1,4 +1,5 @@
-<!-- class="bg-video" -->
+
+ <div  class="homepage">
   <video
       #bgVideo
     
@@ -11,42 +12,80 @@
    
      preload="auto"
   >
-    <source src="assets/videos/DREAM (1240 x 389 px).mp4" type="video/mp4" />
+    <source src="assets/videos/DREAM2 (1240 x 389 px) (1240 x 460 px).mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- <div class="content">
-    <button class="header-nav-btn" [routerLink]="['/products']">Store</button>
-  </div> -->
+  
 
-<!-- <app-hero></app-hero> -->
+<!-- @defer (on viewport) {
 
-@defer (on viewport) {
+
+
+  <section>
+   <div class="animate-on-scroll">
   <app-collections></app-collections>
+ </div>
+</section>
 } @placeholder {
   <section class="placeholder">Loading collections…</section>
 } @loading {
   <section class="placeholder">Fetching collections…</section>
 }
 
-<!--
+
 @defer (on viewport) {
-  <app-featured-products></app-featured-products>
-} @placeholder {
-  <section class="placeholder">Loading featured products…</section>
-}
+  
+  <app-sliderpage></app-sliderpage>
 
-@defer (on viewport; prefetch) {
-  <app-testimonials></app-testimonials>
 } @placeholder {
-  <section class="placeholder">Loading testimonials…</section>
+  <section class="placeholder">Loading..</section>
+} @loading {
+  <section class="placeholder">Fetching …</section>
 }
--->
-
 @defer (on viewport) {
   <app-footer></app-footer>
 } @placeholder {
   <section class="placeholder">Loading footer…</section>
 } @loading {
   <section class="placeholder">Fetching footer…</section>
-}
+} -->
+
+
+<!-- <div class="animate-on-scroll">
+  <app-collections></app-collections>
+ </div>
+
+ <app-sliderpage></app-sliderpage>
+<app-footer></app-footer>
+</div> -->
+
+
+<!-- <div class="animate-on-scroll test-box">Box 1</div>
+<div class="animate-on-scroll test-box">Box 2</div>
+<div class="animate-on-scroll test-box">Box 3</div> -->
+
+
+<section>
+  <div class="animate-on-scroll">
+    <div style="min-height: 200px">
+      <app-collections></app-collections>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div>
+    <div>
+      <app-sliderpage></app-sliderpage>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div>
+    <div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</section>

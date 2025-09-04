@@ -1,0 +1,157 @@
+@keyframes fallFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-40px); /* start above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* natural position */
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.animate-on-scroll.top.is-visible {
+  animation: fallFromTop 0.4s ease forwards;
+}
+
+// .caption{
+//    color: #658223;        /* green */
+//   z-index: 1;
+//   font-size: 1rem;
+//   margin: 0;
+// }
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Top row - Pink background */
+.art-row {
+  flex: 0 0 55%;
+  background: #f55959;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* allow vertical distribution */
+  padding-top: 1rem;
+  padding-left: 2rem;
+  //    padding-right: 2rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* ECO-FRIENDLY (top-left) */
+.eco-text {
+  align-self: flex-start;
+//   font-family: "Licorice", cursive;
+font-family: 'Brittany Signature', sans-serif;
+  font-weight: 500;
+  color: #658223;
+  //   margin-left: 0.2rem;
+
+  .eco {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .friendly {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .subtext {
+    display: block;
+    // font-size: 0.9rem;
+    margin-top: 0;
+    margin-left: 3rem;
+
+    // font-family: "Licorice", cursive;
+font-family: 'Brittany Signature', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    color: #e7d091;
+    text-align: left;
+  }
+}
+
+/* ART (center, top) */
+.art-text {
+  align-self: flex-start;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 27rem;
+  line-height: 0.6;
+  color: #658223;
+  margin: 0;
+  white-space: nowrap;
+  top: 0;
+}
+
+/* IN EVERY LOOK (bottom-right) */
+.in-look {
+  align-self: flex-end;
+//   font-family: "Licorice", cursive;
+font-family: 'Brittany Signature', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #658223;
+  margin-right: 0.21rem;
+}
+
+/* Bottom row - Grey background */
+.bottom-bar {
+  flex: 0 0 45%;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  //   align-items: center;
+  //   padding: 2rem 4rem;
+  position: relative;
+  z-index: 2; /* on top of ART */
+  overflow: visible;
+  align-items: flex-start; /* let children move freely */
+}
+
+.bottom-bar .crafted {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: white;
+  max-width: 250px;
+}
+
+.bottom-bar .artistry {
+//   font-family: "Licorice", cursive;
+  font-family: 'Brittany Signature', sans-serif;
+                                                
+  color: #f1d18a;
+
+  text-align: justify;
+
+  position: absolute;
+  right: 17rem; /* keep it on the right */
+  bottom: 40%; /* move it up so it overlaps pink */
+
+  font-size: 2rem;
+  line-height: 2.2rem;
+  color: #f1d18a;
+}
+
+/* Model Image on top of all */
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3; /* top-most layer */
+  height: 88%;
+  width: auto;
+  object-fit: contain;
+}

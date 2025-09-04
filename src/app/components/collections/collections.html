@@ -1,52 +1,114 @@
-<!-- <div class="cards-container">
-  <div class="card">
-    <h3>Card 1</h3>
-    <p>This is card one.</p>
-  </div>
 
-  <div class="card">
-    <h3>Card 2</h3>
-    <p>This is card two.</p>
-  </div>
 
-  <div class="card">
-    <h3>Card 3</h3>
-    <p>This is card three.</p>
-  </div>
+<div class="collections-page">
 
-  <div class="card">
-    <h3>Card 4</h3>
-    <p>This is card four.</p>
-  </div>
+ <div class="top">
+  
+  <div><h3>EXPLORE WHATS TRENDING <br>THIS SEASON.</h3></div>
+  <div><p>NEW SEASON, SHOP THE NEW STORY</p></div>
+ <div class="btn-row"><button  [routerLink]="['/products']">GO TO STORE</button></div>
 
-  <div class="card">
-    <h3>Card 5</h3>
-    <p>This is card five.</p>
-  </div>
 </div>
- -->
+<div class="middle"><div><p>FEATURED COLLECTIONS</p></div></div>
+<div class="cards-container">
+  <main>
+    <div
+      class="card"
+      [routerLink]="['/products']"
+      [queryParams]="{ collection: 'core' }"
+    >
+      <img
+        src="assets/CoreBasicsCover.png"
+        alt=""
+      />
+      <div class="card-content">
+        <h3 class="animate-on-scroll left">Core</h3>
+        <p>Basics</p>
+      </div>
+    </div>
+  </main>
+  <main>
+    <div
+      class="card"
+      [routerLink]="['/products']"
+      [queryParams]="{ collection: 'dreamy' }"
+    >
+     
+        <img
+        src="assets/DreamyLinensCover.png"
+        alt=""
+      />
+      <div class="card-content">
+        <h3 class="animate-on-scroll left">DREAMY</h3>
+        <p>Linens</p>
+      </div>
+    </div>
+  </main>
+  <main>
+    <div
+      class="card"
+      [routerLink]="['/products']"
+      [queryParams]="{ collection: 'vandal' }"
+    >
+      <img
+        src="assets/VandalCover.png"
+        alt=""
+      />
+      <div class="card-content">
+        <h3 class="animate-on-scroll left">Vandal</h3>
+        <p>Streetsyle Designs</p>
+      </div>
+    </div>
+  </main>
+  <main>
+    <div
+      class="card"
+      [routerLink]="['/products']"
+      [queryParams]="{ collection: 'edge' }"
+    >
+      <img
+        src="assets/EdgeCover (2).png"
+        alt=""
+      />
+      <div class="card-content">
+        <h3 class="animate-on-scroll left">Edge</h3>
+        <p>Classic FormalWear</p>
+      </div>
+    </div>
+  </main>
+
+  
 
 
 
- <!-- home.component.html -->
-  <div class="cards-container">
-<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'dreamy' }">
-  <h3>DREAMY</h3><p>linens</p>
-</a>
+  <main>
+    <div
+      class="card"
+      [routerLink]="['/products']"
+      [queryParams]="{ collection: 'hologram' }"
+    >
+      <img
+        src="assets/HologramCover.png"
+        alt=""
+      />
+      <div class="card-content">
+        <h3 class="animate-on-scroll left">Hologram</h3>
+        <p>Party Edit</p>
+      </div>
+    </div>
+  </main>
+</div>
 
-<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'edge' }">
-  <h3>Edge</h3><p>cformals</p>
-</a>
 
-<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'core' }">
-  <h3>Core</h3><p>basics</p>
-</a>
 
-<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'vandal' }">
-  <h3>Vandal</h3><p>inspired steetstyle designs</p>
-</a>
 
-<a class="card" [routerLink]="['/products']" [queryParams]="{ collection: 'hologram' }">
-  <h3>Hologram</h3><p>Party wear</p>
-</a>
+
+<div class="bottom">
+  <div><h3>DISCOVER</h3></div>
+  <div><p>OUR CURATED EDITS</p></div>
+ <div><button  [routerLink]="['/products']">SHOP NOW</button></div>
+
+</div>
+
+
 </div>
