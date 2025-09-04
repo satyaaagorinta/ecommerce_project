@@ -286,6 +286,7 @@ text-align: center;
 align-items: center;
   h3{
     font-family: poppins;
+
     font-weight: 900;
     font-size: 3.5rem;
     color: #1b1a1a;
@@ -298,6 +299,7 @@ align-items: center;
       font-family: poppins;
        margin-bottom: 1rem;
        margin-top: 1rem;
+       
   }
 
 }
@@ -307,6 +309,8 @@ align-items: center;
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
  button{
   display: flex;
   flex-direction: column;
@@ -334,8 +338,9 @@ align-items: center;
   p{
     font-family: poppins;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: 4rem;
-    
+                   font-family: 'Brittany Signature', sans-serif;
+
   }
  }

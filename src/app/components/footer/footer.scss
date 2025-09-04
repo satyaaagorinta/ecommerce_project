@@ -13,7 +13,7 @@
 %transicion { transition: all ease 0.3s; }
 
 .footer {
-  margin-top: 80px;
+  margin-top: 6rem;
   color: var(--dark);
   font-family: var(--text-font);
 
@@ -57,47 +57,61 @@ color: #fff;
   }
 
   &__photo {
+    
     // position: relative;
     // display: block;
     // overflow: hidden;
-    // border-radius: 1rem;
-    //  margin: 0;
-    // aspect-ratio: 1 / 1; 
-    // max-width: 250px;      
-    // max-height: 250px;
+    // border-radius: 0;       // remove rounded edges if you want zero gap
+    // margin: 0;              // no extra margin
+    // aspect-ratio: 1 / 1;    // keeps them square
+    // width: 100%;            // fill the item
+    // height: 100%;
     position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 0;       // remove rounded edges if you want zero gap
-    margin: 0;              // no extra margin
-    aspect-ratio: 1 / 1;    // keeps them square
-    width: 100%;            // fill the item
-    height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 0;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: 100%;
   }
 &__photo img {
-    // width: 100%;
+    
+    //  width: 100%;
     // height: 100%;
-    // object-fit: cover; 
-    // border-radius: 6px;
+    // object-fit: cover;
     // display: block;
-     width: 100%;
+    // border-radius: 0; 
+    width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 0; 
+    border-radius: 0;
+    transition: transform 0.4s ease, filter 0.35s ease;
   }
 
   &__fade {
-    @extend %transicion;
-    position: absolute;
-    inset: 0;
-    background-color: var(--dark-fade);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
+    // @extend %transicion;
+    // position: absolute;
+    // inset: 0;
+    // background-color: var(--dark-fade);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // opacity: 0;
 
-    &:hover { opacity: 1; }
+    // &:hover { opacity: 1; }
+    @extend %transicion;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.119); /* adjustable darkening */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;        /* let hover pass through to .gallery__photo */
+  transition: opacity 0.35s ease;
+  z-index: 4;
   }
 
   &__icon {
@@ -134,4 +148,89 @@ a{
   color: #fff;
   margin-bottom:2rem ;
   padding: 2rem;
+}
+
+.caption{
+  display:flex;
+  align-content: space-between;
+  justify-content: space-between;
+
+margin: 2rem;
+margin-bottom: 4rem;
+margin-left: 6rem;
+margin-right: 9rem;
+
+  .heading{
+    h3{
+      font-family: poppins;
+      font-size: 3rem;
+      color: #fb9d9d;
+      font-weight: 600;
+    }
+  }
+
+
+  .description{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+margin-left: 1rem;
+margin-right:2rem ;
+    .btn-title{
+      font-family: poppins;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 100;
+      color: #fff;
+    }
+
+    .btn{
+      background-color: transparent;
+      border: 1.5px solid #fff;
+      color: #fff;
+      font-family: poppins;
+      border-radius: 1rem;
+      width: 7rem;
+      padding: 0.35rem;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
+
+.gallery__icon, .gallery__fade svg, .gallery__fade .fa-instagram {
+  color: #ffffff63;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: transform 0.28s ease, opacity 0.28s ease;
+  font-size: 2.5rem;
+  
+}
+
+/* HOVER: when hovering the photo, reveal overlay and icon, dim image */
+.gallery__photo:hover .gallery__fade {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gallery__photo:hover img {
+  filter: brightness(0.8); /* darken image */
+ 
+}
+
+.gallery__photo:hover .gallery__icon,
+.gallery__photo:hover .gallery__fade svg,
+.gallery__photo:hover .gallery__fade .fa-instagram {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fa-instagram{
+  
 }

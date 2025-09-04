@@ -1,10 +1,23 @@
 <footer class="footer">
+<div class="caption">
+  <div class="heading">
+<h3>STORIES</h3>
+  </div>
+  <div class="description">
+    <div class="btn-title">See the story unfold,<br>Follow our journey on <br>Instagram.</div>
+    <div class="btn"><div><button><div>@SRESE</div></button></div></div>
+
+  </div>
+</div>
+
+
+
   <owl-carousel-o [options]="options" class="gallery__carousel" >
     <ng-template carouselSlide *ngFor="let src of items">
       <a href="#" class="gallery__photo" aria-label="Open Instagram photo">
         <img [src]="src" alt="" loading="lazy" />
         <div class="gallery__fade">
-          <i class="gallery__icon" data-feather="instagram" aria-hidden="true"></i>
+          <i class="fab fa-instagram gallery__icon" data-feather="instagram" aria-hidden="true"></i>
         </div>
       </a>
     </ng-template>

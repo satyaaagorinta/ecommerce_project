@@ -12,64 +12,78 @@
   justify-content: center;
 }
 
+
+
+
 .searchbar-container-bg {
-  padding-bottom: 1.5rem;
+  padding: 1.5rem 0;
   display: flex;
   justify-content: center;
-  // margin-top: 1rem;
-  max-width: 100%;
-  background-color: #f1f0f0;
+   background-color: #eeeeee;
+  width: 100%;
 }
 
 .searchbar-container {
   display: flex;
   align-items: center;
-  border: 1px solid #2e2e2e;
-  //  border: 1px solid rgb(251, 157, 157);
-  border-radius: 20px;
+  // border: 3px solid #1b1a1a;
+  border-radius: 2rem;
   overflow: hidden;
-  max-width: 100%;
-  // width: 100%;
-  margin-left: 14rem;
-  margin-right: 9rem;
-  margin-top: 1.5rem;
+  background: #1b1a1a;
+  // margin: 0 auto;
+  max-width: 200px;
+  width: 100%;
+   padding: 0.5rem 0.5rem;
 }
 
-.searchbar-container input {
+/* Input */
+.search-input {
   flex: 1;
   border: none;
   outline: none;
-  padding: 0.35rem 1rem;
-  background: transparent;
+  // padding: 0.5rem 1rem;
+  background: #1b1a1a;
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+  font-size: 0.75rem;
 
-  font-family: poppins;
-  font-size: 0.7rem;
+  /* ✅ black placeholder */
+  &::placeholder {
+    color: #ffffff;
+    opacity: 1;
+  }
 }
 
-.searchbar-container button {
-  background: none;
+/* Search Button (circle) */
+.search-btn {
+   background: #ffffff;        /* black background */
   border: none;
-  padding: 0.45rem 0.75rem;
-  cursor: pointer;
-  // color: #555;
+  border-radius: 50%;      /* circle */
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
+  justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-right: 0.5rem;    /* small gap to input */
 }
 
-.searchbar-container button:hover {
-  color: rgb(63, 63, 63);
+.search-btn i {
+  color: #000000;            /* white icon */
+  font-size: 1rem;
+  line-height: 1;
 }
 
-.searchbar-container i {
-  font-size: 15px; /* smaller than default 24px */
-  font-weight: 300; /* lighter appearance */
+/* Hover → pink background */
+.search-btn:hover {
+  background: #fb9d9d;    /* pink */
 }
 
 
-
-input{
-color: #000000;
-
-
+.clear-link{
+  margin-left: 3rem;
+  font-family: poppins;
+  font-size: 1rem;
+  
 }
-

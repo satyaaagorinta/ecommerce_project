@@ -1,21 +1,9 @@
-<!-- <div class="searchbar-container-bg">
-    <div class="searchbar-container">
-        <input type = "text" #filter placeholder="search">
-        <button class = "primary"  type = "button" (click) ="onSearch(filter.value)"><i class="material-icons">search</i></button>
-    </div>
-</div> -->
 
 
 <div class="searchbar-container-bg">
   <div class="searchbar-container" role="search" aria-label="Product search">
-    <input
-      type="text"
-      #filter
-      placeholder="Search" 
-      class="search-input"
-      (keydown.enter)="onSearch(filter.value)"
-      aria-label="Search input"
-    />
+    
+    <div>
     <button
       class="primary search-btn"
       type="button"
@@ -24,21 +12,24 @@
     >
       <i class="material-icons" aria-hidden="true">search</i>
     </button>
+    </div>
+    <div><input
+      type="text"
+      #filter
+      placeholder="Search" 
+      class="search-input"
+      (keydown.enter)="onSearch(filter.value)"
+      aria-label="Search input"
+    /></div>
   </div>
 </div>
 
-<!-- <div *ngIf="productArray.length > 0" class="product-list">
-    <app-product-card
-      *ngFor="let product of productArray; let i = index"
-      [product]="product"
-      
-    ></app-product-card>
-  </div> -->
+
 
 <section class="header" *ngIf="activeCollection">
   <h2 class="title">
-    Products — {{ activeCollection }}
-    <a [routerLink]="['/products']" class="clear-link">Clear</a>
+  
+    <!-- <a [routerLink]="['/products']" class="clear-link">See All</a> -->
   </h2>
 </section>
 
