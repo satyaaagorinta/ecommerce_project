@@ -69,3 +69,136 @@
    
   }
 }
+
+
+
+.empty-cart-page{
+  
+   position: relative;
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+//  background-color: #eeeeee;
+// background-color: #fb9d9d;
+// background-color: #1b1a1a;
+background-color: #fff;
+    overflow:visible;
+display: flex;
+
+align-content: center;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 0;
+  .empty-cart-image{
+    width: 300px;
+    height: auto;
+   margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;align-items: center;
+    
+  }
+
+  .caption{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   align-content: center;
+       margin-left: 0;
+
+     h1{
+    
+    // font-size: 2.25rem;
+    // line-height: 7rem;
+    // font-family: brittany signature;
+     font-family: poppins;
+margin-left: 2rem;
+margin-right: 2rem;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #1b1a1a;
+    line-height: 2.3rem;
+    text-align: center;
+     }
+     
+      // font-family: poppins;
+      
+    .oops{
+ font-family: brittany signature;
+    font-weight: 200;
+       color: #1b1a1a;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+       margin-top: 3rem;
+    }
+    .lets{
+       font-family: poppins;
+       font-weight: 100;
+       color: #1b1a1a;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+       margin-top: 1rem;
+       text-transform: uppercase;
+    }
+    
+     
+   
+
+  }
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+   gap: 5px;
+  background-color: black; /* button background always black */
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.35rem 0.65rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 100;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.back-button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;   /* default icon bg */
+  color: black;              /* arrow color */
+  border-radius: 50%;
+  width: 1.1rem;
+  height: 1.1rem;
+  font-size: 0.75rem;
+  
+  transition: background-color 0.3s ease; /* smooth hover effect */
+}
+
+.back-button:hover .icon {
+  background-color: #fb9d9d; /* only icon bg turns pink */
+}
+.card{
+  // background-color: #fff;
+  // background-color: #1b1a1a;
+
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

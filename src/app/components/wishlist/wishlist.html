@@ -1,11 +1,9 @@
 
-<div class="products-container box-size-full-percent">
 
-<ng-container *ngIf = "wishlistItems.length === 0">
-    <h4>Empty wishlist</h4>
-</ng-container>
 
-<ng-container *ngIf = "wishlistItems.length > 0">
+
+
+<ng-container *ngIf = "wishlistItems.length > 0; else emptyWishList">
 
     <h4>Your Wishlist</h4>
     <hr>
@@ -21,4 +19,34 @@
 
 </div>
 </ng-container>
+
+
+
+
+<ng-template #emptyWishList>
+     <div class="empty-cart-page">
+    
+
+<div class="caption">
+
+<div><p class="oops">Oops!</p></div>
+    <div><h1>YOUR&nbsp;&nbsp;WISHLIST&nbsp;&nbsp;IS&nbsp;&nbsp;EMPTY</h1>
 </div>
+<div><p class="lets">Start adding items you love!</p></div>
+<div>
+   <button class="back-button" [routerLink]="['/products']">
+  <span class="icon material-icons">arrow_back</span>
+  <span class="text">Go to Store</span>
+</button>
+
+
+</div>
+</div>
+<div class="empty-cart-image">
+    <div> <img src="assets/emptywishlist.png"></div>
+ 
+</div>
+  </div>
+</ng-template>
+
+ 

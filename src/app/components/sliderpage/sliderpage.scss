@@ -57,14 +57,24 @@ font-family: 'Brittany Signature', sans-serif;
   font-weight: 500;
   color: #658223;
   //   margin-left: 0.2rem;
+  
 
   .eco {
     margin: 0;
     font-size: 2rem;
+    font-family: 'Brittany Signature', sans-serif;
+     font-weight: 500;
+  color: #658223;
+  align-self: flex-start;
+  text-align: left;
   }
   .friendly {
     margin: 0;
     font-size: 2rem;
+    font-family: 'Brittany Signature', sans-serif;
+     font-weight: 500;
+  color: #658223;
+  align-self: flex-start;
   }
   .subtext {
     display: block;
@@ -155,3 +165,360 @@ font-family: 'Brittany Signature', sans-serif;
   width: auto;
   object-fit: contain;
 }
+
+
+
+//slide2
+
+.slide2{
+  padding: 2rem;
+  background-color:#1b1a1a ;
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  // align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+ 
+
+.point{
+  font-family: poppins;
+  font-size: 0.75rem;
+  font-weight: 100;
+  color: #f7f7f0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+ 
+p{
+  color: #f7f7f0;
+  font-size: 0.55rem;
+  font-weight: 100;
+}
+}
+
+  .column1{
+    
+  display: flex;
+  flex-direction: column;
+  //  justify-content: space-around;
+   
+  // margin: 2rem;
+  // margin-bottom: 4rem;
+  
+// margin: 1rem;
+ .one{
+  text-align: left;
+   
+  
+}
+ .two{
+  text-align: left;
+ 
+  
+  
+}
+
+
+
+}
+  .column3{
+  display: flex;
+  flex-direction: column;
+  //  justify-content: space-around;
+  // align-content: space-around;
+  //  margin: 1rem;
+  // margin-bottom: 4rem;
+
+ .three{
+  text-align: right;
+}
+ .four{
+  text-align: right;
+  
+}
+
+
+
+}
+
+.column2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+  
+  .switch{
+    font-family: poppins;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+    // color: #f55959;
+    color: #f7f7f0;
+  }
+
+
+.sustainable{
+   font-family: poppins;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 3rem;
+}
+.sustainable, .wardrobe, .srese{
+ 
+
+  /* Gradient background for text */
+  background: linear-gradient(
+    270deg, 
+   
+   
+  
+    #658223,   /* green */
+    #ff6a6a,   /* pink */
+    #658223,   /* green again */
+    #f7f7f0,   /* white */
+    #658223,   /* back to green */
+    #ff6a6a    /* pink again */ 
+        
+    
+   
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate gradient */
+  animation: gradientShift 50s ease infinite;
+}
+
+@keyframes gradientShift { 
+   0%   { background-position: 0% 50%; }    /* starts with green */
+  40%  { background-position: 100% 50%; }  /* mostly green + pink */
+  50%  { background-position: 80% 50%; }   /* white briefly */
+  90%  { background-position: 0% 50%; }    /* back to green + pink */
+  100% { background-position: 0% 50%; }
+}
+
+.wardrobe{
+   font-family: poppins;
+   font-size: 3.5rem;
+   font-weight: 800;
+  //  color: #f7f7f0;
+   line-height: 4rem;
+}
+.with{
+   font-family: 'Brittany Signature', sans-serif;
+
+  font-size: 1.3rem;
+  color: white;
+}
+.SRESE{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  .srese{
+    font-family: poppins;
+    font-weight: 500;
+    font-size: 1.25rem;
+    // color: #f55959;
+    color: #f7f7f0;
+  }
+  .logo{
+    img{
+ width: 1.1rem;
+    height: 1.1rem;
+    }
+   
+  }
+}
+.mainimg{
+  width: 40%;
+  height: 40%;
+  margin-bottom: 2rem;
+
+  img{
+    width:500px;
+    height:200px;
+  }
+}
+}
+  
+}
+
+.column1, .column3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // pushes top to top & bottom to bottom
+  flex: 1; // makes them expand equally
+   margin-bottom: 4rem;
+}
+
+// @-webkit-keyframes aitf {
+// 	0% { background-position: 0% 50%; }
+// 	100% { background-position: 100% 50%; }
+// }
+
+
+.slide3{
+  
+ 
+  display: flex;
+   flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+   p{
+   font-family: poppins;
+       font-weight: 100;
+       color: #1b1a1a;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+       margin-top: 1rem;
+        
+    }
+
+    .img-container{
+    display: flex;
+      justify-content: space-around;
+  align-content: space-around;
+flex-direction: row;
+ gap: 0.5rem;
+// margin-bottom: 4rem;
+margin-left: 1rem;
+margin-right: 1rem;
+
+  }
+
+img{
+  height:300px;
+  width: 700px;
+
+}
+
+  .caption{
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   align-content: center;
+
+
+  
+  }
+    h2{
+  font-family: poppins;
+margin-left: 2rem;
+margin-right: 2rem;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: #1b1a1a;
+    line-height: 2.6rem;
+    text-align: center;
+ 
+    }
+
+   
+
+
+ button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    background-color: #1b1a1a;
+    font-family: POPPINS;
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+  color: #ffffff;
+  
+    
+    //  margin-bottom: 1rem;
+    font-size: 0.7rem;
+    font-weight: 300;
+    width: 10rem;
+    align-self: center;
+     border-radius: 2rem;
+  }
+
+
+
+.img1, .img2{
+  overflow: hidden;
+}
+
+
+img{
+  transition: transform 0.4s ease; /* smooth zoom */
+  overflow: hidden; 
+}
+.img-title {
+  position: absolute;
+  bottom: 1rem;   /* place near bottom of image */
+ left: 15%;
+  transform: translateX(-50%);
+
+  color: #fff;
+  margin: 5px 10px;
+  font-size: 1.5rem;
+  border-radius: 4px;
+ opacity:0;
+  font-family: Brittany Signature;
+  transition: opacity 0.3s ease;
+
+   bottom: -40px; /* hidden below the image */
+}
+
+/* Show caption on hover */
+img:hover{
+  opacity: 0.97;
+   transform: scale(1.05); /* zoom in */
+  
+}
+
+.img1:hover .img-title,
+.img2:hover .img-title {
+  opacity: 1;
+   bottom: 15px;
+}
+
+
+
+
+.img1, .img2{
+    position: relative;     /* REQUIRED for absolute child positioning */
+  overflow: hidden;       /* clipping for zoom */
+
+}
+
+.img1 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(.2,.8,.2,1), opacity 0.3s;
+  transform-origin: center center;
+}
+
+.img2 img{
+   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(.2,.8,.2,1), opacity 0.3s;
+  transform-origin: center center;
+}
+
+}
+  

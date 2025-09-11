@@ -59,5 +59,10 @@ export const routes: Routes = [
         component: AddProduct,
         
       },
+      // {
+      //   path: 'catalog',
+      //   component: C,
+        
+      // },
 
 ];

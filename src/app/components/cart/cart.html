@@ -53,5 +53,31 @@
 </ng-container>
 
 <ng-template #emptyCart>
-<p>Cart is empty</p>
+ <div class="empty-cart-page">
+    
+
+<div class="caption">
+
+<div><p class="oops">Oops!</p></div>
+    <div><h1>NOTHING&nbsp;&nbsp;IN&nbsp;&nbsp;YOUR&nbsp;&nbsp;CART&nbsp;&nbsp; YET</h1>
+</div>
+<div><p class="lets">LET"S FIX THAT!</p></div>
+<div>
+   <button class="back-button" [routerLink]="['/products']">
+  <span class="icon material-icons">arrow_back</span>
+  <span class="text">Go Back to Store</span>
+</button>
+
+
+</div>
+</div>
+<div class="empty-cart-image">
+    <div> <img src="assets/emptycart.png"></div>
+ 
+</div>
+  </div>
 </ng-template>
+
+
+
+ 

@@ -10,10 +10,12 @@
 
 // }
 import { Component, AfterViewInit, ElementRef, ViewChild, NgZone, ChangeDetectionStrategy } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sliderpage',
   templateUrl: './sliderpage.html',
+  imports: [RouterLink],
   styleUrls: ['./sliderpage.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

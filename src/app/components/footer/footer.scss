@@ -152,13 +152,14 @@ a{
 
 .caption{
   display:flex;
-  align-content: space-between;
+   align-content:space-between;
   justify-content: space-between;
+max-width: 70%;
+gap: 0;
+margin: 4rem;
 
-margin: 2rem;
-margin-bottom: 4rem;
-margin-left: 6rem;
-margin-right: 9rem;
+// margin-left: 6rem;
+// margin-right: 9rem;
 
   .heading{
     h3{
